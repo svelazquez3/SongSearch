@@ -33,3 +33,19 @@ void Songs::Song_Count(){
   cout << "Total songs found: " << songCount-1;
 }
 
+bool Songs::Search_Song(vector<string> song){
+  int info_match; 
+  for(int x = 0; x < playlist.size(); x++)
+  {
+    for(int y = 0; y < playlist[x].size(); y++)
+    {
+      if(playlist[x][y] == song[y])
+        info_match++; 
+    }
+  }
+  
+  if(info_match >= 2) // Means 2/3 variables (song, artist, or id number) match.
+    return true; // song found
+  else
+    return false; // song not found
+}

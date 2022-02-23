@@ -9,11 +9,9 @@ class Songs{
     void Insert(vector <string> song); // Adds song to playlist
     void Display_All(); // Prints all songs
     void Song_Count(); // Prints total num of songs
+    bool Search_Song(vector <string> song); // Returns T/F if song is found in playlist 
     /*
-    void search();
     void create();
-    void found_copy;
-    void erase(); 
     void display_all(); 
     */
 
